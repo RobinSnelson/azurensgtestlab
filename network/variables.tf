@@ -37,12 +37,12 @@ variable "services_subnet2_iprange" {
   default = "10.1.3.0/24"
 }
 
-variable "resource_vnet1_iprange" {
+variable "resource1_vnet1_iprange" {
   type    = string
   default = "10.1.4.0/23"
 }
 
-variable "resource_subnet1_iprange" {
+variable "resource1_subnet1_iprange" {
   type    = string
   default = "10.1.4.0/26"
 
