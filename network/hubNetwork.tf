@@ -30,6 +30,17 @@ resource "azurerm_subnet" "gateway_subnet1" {
   ]
 }
 
+###Bastion Subnet
+resource "azurerm_subnet" "bastion_subnet1" {
+  name                 = "AzureBastionSubnet"
+  resource_group_name  = azurerm_resource_group.network_rg.name
+  virtual_network_name = azurerm_virtual_network.hub_vnet.name
+
+  address_prefixes = [
+    var.Bastion_subnet_iprange
+  ]
+}
+
 ## Peerings
 
 resource "azurerm_virtual_network_peering" "hub_services_peering" {

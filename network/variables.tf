@@ -22,6 +22,11 @@ variable "gateway_subnet_iprange" {
   type    = string
   default = "10.1.0.0/27"
 }
+
+variable "Bastion_subnet_iprange" {
+  type    = string
+  default = "10.1.0.32/27"
+}
 variable "services_vnet_iprange" {
   type    = string
   default = "10.1.2.0/23"
